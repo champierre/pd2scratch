@@ -8115,29 +8115,29 @@ var img = "data:image/svg+xml,%3c%3fxml version='1.0' encoding='UTF-8' standalon
 
 var translationMap = {
   'ja': {
-    'gui.extension.xcratchExample.description': 'Xcratch 拡張の例'
+    'gui.extension.pd2Scratch.description': 'Xcratch 拡張の例'
   },
   'ja-Hira': {
-    'gui.extension.xcratchExample.description': 'Xcratch (えくすくらっち)かくちょうのれい'
+    'gui.extension.pd2Scratch.description': 'Xcratch (えくすくらっち)かくちょうのれい'
   }
 };
 var entry = {
   name: 'Xcratch Example',
-  extensionId: 'xcratchExample',
-  extensionURL: 'https://yokobond.github.io/xcratch-example/dist/xcratchExample.mjs',
+  extensionId: 'pd2Scratch',
+  extensionURL: 'https://yokobond.github.io/xcratch-example/dist/pd2Scratch.mjs',
   collaborator: 'Yengawa Lab',
   iconURL: img$1,
   insetIconURL: img,
   description: /*#__PURE__*/react.createElement(FormattedMessage, {
     defaultMessage: "example extension for Xcratch",
     description: "Description for example extension for Xcratch",
-    id: "gui.extension.xcratchExample.description"
+    id: "gui.extension.pd2Scratch.description"
   }),
   featured: true,
   disabled: false,
   bluetoothRequired: false,
   internetConnectionRequired: true,
-  helpLink: 'https://github.com/yokobond/xcratch-example/',
+  helpLink: 'https://github.com/champierre/pd2scratch/',
   translationMap: translationMap
 };
 
@@ -10865,14 +10865,14 @@ var formatMessage$1 = createCommonjsModule(function (module, exports) {
  */
 
 var formatMessage = formatMessage$1;
-var EXTENSION_ID = 'xcratchExample';
+var EXTENSION_ID = 'pd2Scratch';
 /**
  * URL to get this extension as a module.
  * When it was loaded as a module, 'extensionURL' will be replaced a URL which is retrieved from.
  * @type {string}
  */
 
-var extensionURL = 'https://yokobond.github.io/xcratch-example/dist/xcratchExample.mjs';
+var extensionURL = 'https://yokobond.github.io/xcratch-example/dist/pd2Scratch.mjs';
 /**
  * Icon png to be displayed at the left edge of each extension block, encoded as a data URI.
  * @type {string}
@@ -10884,13 +10884,13 @@ var blockIconURI = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAA
  * Scratch 3.0 blocks for example of Xcratch.
  */
 
-var XcratchExampleBlocks = /*#__PURE__*/function () {
+var pd2ScratchBlocks = /*#__PURE__*/function () {
   /**
    * Construct a set of blocks for Xcratch Example.
    * @param {Runtime} runtime - the Scratch 3.0 runtime.
    */
-  function XcratchExampleBlocks(runtime) {
-    _classCallCheck(this, XcratchExampleBlocks);
+  function pd2ScratchBlocks(runtime) {
+    _classCallCheck(this, pd2ScratchBlocks);
 
     /**
      * The Scratch 3.0 runtime.
@@ -10908,14 +10908,14 @@ var XcratchExampleBlocks = /*#__PURE__*/function () {
    */
 
 
-  _createClass(XcratchExampleBlocks, [{
+  _createClass(pd2ScratchBlocks, [{
     key: "getInfo",
     value: function getInfo() {
       this.setupTranslations();
       return {
-        id: XcratchExampleBlocks.EXTENSION_ID,
-        name: XcratchExampleBlocks.EXTENSION_NAME,
-        extensionURL: XcratchExampleBlocks.extensionURL,
+        id: pd2ScratchBlocks.EXTENSION_ID,
+        name: pd2ScratchBlocks.EXTENSION_NAME,
+        extensionURL: pd2ScratchBlocks.extensionURL,
         blockIconURI: blockIconURI,
         showStatusButton: false,
         blocks: [{
@@ -10923,7 +10923,7 @@ var XcratchExampleBlocks = /*#__PURE__*/function () {
           blockType: blockType.REPORTER,
           blockAllThreads: false,
           text: formatMessage({
-            id: 'xcratchExample.doIt',
+            id: 'pd2Scratch.doIt',
             default: 'do it [SCRIPT]',
             description: 'execute javascript for example'
           }),
@@ -10998,20 +10998,20 @@ var XcratchExampleBlocks = /*#__PURE__*/function () {
     }
   }]);
 
-  return XcratchExampleBlocks;
+  return pd2ScratchBlocks;
 }();
 
 var extensionTranslations = {
   'ja': {
-    'xcratchExample.doIt': '[SCRIPT] を実行する'
+    'pd2Scratch.doIt': '[SCRIPT] を実行する'
   },
   'ja-Hira': {
-    'xcratchExample.doIt': '[SCRIPT] をじっこうする'
+    'pd2Scratch.doIt': '[SCRIPT] をじっこうする'
   }
 };
-var blockClass = XcratchExampleBlocks; // loadable-extension needs this line.
+var blockClass = pd2ScratchBlocks; // loadable-extension needs this line.
 
-var _xcratchExample = XcratchExampleBlocks;
-_xcratchExample.blockClass = blockClass;
+var _pd2Scratch = pd2ScratchBlocks;
+_pd2Scratch.blockClass = blockClass;
 
-export { _xcratchExample as __moduleExports, blockClass, entry };
+export { _pd2Scratch as __moduleExports, blockClass, entry };

@@ -3,14 +3,14 @@
   "version": "0.1.0",
   "description": "example extension for Xcratch",
   "scripts": {
-    "register": "node ./scripts/register.js --link -C --id=\"xcratchExample\" --gui=\"../scratch-gui\"",
-    "build": "rimraf ./dist && mkdirp ./dist && node ./scripts/build.js --name=xcratchExample --block=\"./src/block\" --entry=\"./src/entry\" --gui=\"../scratch-gui\" --output=\"./dist\"",
-    "build:debug": "rimraf ./build && mkdirp ./build && node ./scripts/build.js --name=xcratchExample --block=\"./src/block\" --entry=\"./src/entry\" --gui=\"../scratch-gui\" --output=\"./build\" --debug",
+    "register": "node ./scripts/register.js --link -C --id=\"pd2Scratch\" --gui=\"../scratch-gui\"",
+    "build": "rimraf ./dist && mkdirp ./dist && node ./scripts/build.js --name=pd2Scratch --block=\"./src/block\" --entry=\"./src/entry\" --gui=\"../scratch-gui\" --output=\"./dist\"",
+    "build:debug": "rimraf ./build && mkdirp ./build && node ./scripts/build.js --name=pd2Scratch --block=\"./src/block\" --entry=\"./src/entry\" --gui=\"../scratch-gui\" --output=\"./build\" --debug",
     "startDevServer": "cd ../scratch-gui && npm run start -- --https"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yokobond/xcratch-example.git"
+    "url": "git+https://github.com/champierre/pd2scratch.git"
   },
   "keywords": [
     "scratch",
@@ -19,9 +19,9 @@
   "author": "Koji Yokokawa",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yokobond/xcratch-example/issues"
+    "url": "https://github.com/champierre/pd2scratch/issues"
   },
-  "homepage": "https://github.com/yokobond/xcratch-example#readme",
+  "homepage": "https://github.com/champierre/pd2scratch#readme",
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/plugin-transform-react-jsx": "^7.10.4",

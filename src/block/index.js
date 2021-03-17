@@ -10,14 +10,14 @@ const ArgumentType = require('../../extension-support/argument-type');
  */
 let formatMessage = require('format-message');
 
-const EXTENSION_ID = 'xcratchExample';
+const EXTENSION_ID = 'pd2Scratch';
 
 /**
  * URL to get this extension as a module.
  * When it was loaded as a module, 'extensionURL' will be replaced a URL which is retrieved from.
  * @type {string}
  */
-let extensionURL = 'https://yokobond.github.io/xcratch-example/dist/xcratchExample.mjs';
+let extensionURL = 'https://yokobond.github.io/xcratch-example/dist/pd2Scratch.mjs';
 
 /**
  * Icon png to be displayed at the left edge of each extension block, encoded as a data URI.
@@ -29,13 +29,13 @@ const blockIconURI = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYA
 /**
  * Scratch 3.0 blocks for example of Xcratch.
  */
-class XcratchExampleBlocks {
+class pd2ScratchBlocks {
 
     /**
      * @return {string} - the name of this extension.
      */
     static get EXTENSION_NAME () {
-        return 'Xcratch Example';
+        return 'Pitch Detection';
     }
 
     /**
@@ -84,9 +84,9 @@ class XcratchExampleBlocks {
     getInfo () {
         this.setupTranslations();
         return {
-            id: XcratchExampleBlocks.EXTENSION_ID,
-            name: XcratchExampleBlocks.EXTENSION_NAME,
-            extensionURL: XcratchExampleBlocks.extensionURL,
+            id: pd2ScratchBlocks.EXTENSION_ID,
+            name: pd2ScratchBlocks.EXTENSION_NAME,
+            extensionURL: pd2ScratchBlocks.extensionURL,
             blockIconURI: blockIconURI,
             showStatusButton: false,
             blocks: [
@@ -95,7 +95,7 @@ class XcratchExampleBlocks {
                     blockType: BlockType.REPORTER,
                     blockAllThreads: false,
                     text: formatMessage({
-                        id: 'xcratchExample.doIt',
+                        id: 'pd2Scratch.doIt',
                         default: 'do it [SCRIPT]',
                         description: 'execute javascript for example'
                     }),
@@ -138,12 +138,12 @@ class XcratchExampleBlocks {
 
 const extensionTranslations = {
     'ja': {
-        'xcratchExample.doIt': '[SCRIPT] を実行する'
+        'pd2Scratch.doIt': '[SCRIPT] を実行する'
     },
     'ja-Hira': {
-        'xcratchExample.doIt': '[SCRIPT] をじっこうする'
+        'pd2Scratch.doIt': '[SCRIPT] をじっこうする'
     }
 };
 
-exports.blockClass = XcratchExampleBlocks; // loadable-extension needs this line.
-module.exports = XcratchExampleBlocks;
+exports.blockClass = pd2ScratchBlocks; // loadable-extension needs this line.
+module.exports = pd2ScratchBlocks;

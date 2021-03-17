@@ -11,11 +11,24 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
+          repository: LLK/scratch-gui
+          ref: develop
+          path: ./scratch-gui
+      - run: npm install
+        working-directory: ./scratch-gui
+      - uses: actions/checkout@v2
+        with:
           repository: champierre/pd2scratch
           ref: master
           path: ./pd2scratch
+      - run: npm install
+        working-directory: ./pd2scratch
+      - run: node ./scripts/register.js --link --id=pd2Scratch -C
+        working-directory: ./pd2scratch
+      - run: npm run build
+        working-directory: ./scratch-gui
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./pd2scratch
+          publish_dir: ./scratch-gui/build
           keep_files: true

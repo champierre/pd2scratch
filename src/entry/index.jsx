@@ -1,37 +1,37 @@
 import React from 'react';
 import {FormattedMessage} from 'react-intl';
 
-import xcratchExampleIconURL from './entry-icon.png';
-import xcratchExampleInsetIconURL from './inset-icon.svg';
+import pd2ScratchIconURL from './entry-icon.png';
+import pd2ScratchInsetIconURL from './inset-icon.svg';
 
 const translationMap = {
     'ja': {
-        'gui.extension.xcratchExample.description': 'Xcratch 拡張の例'
+        'gui.extension.pd2Scratch.description': 'Xcratch 拡張の例'
     },
     'ja-Hira': {
-        'gui.extension.xcratchExample.description': 'Xcratch (えくすくらっち)かくちょうのれい'
+        'gui.extension.pd2Scratch.description': 'Xcratch (えくすくらっち)かくちょうのれい'
     }
 };
 
 const entry = {
     name: 'Xcratch Example',
-    extensionId: 'xcratchExample',
-    extensionURL: 'https://yokobond.github.io/xcratch-example/dist/xcratchExample.mjs',
+    extensionId: 'pd2Scratch',
+    extensionURL: 'https://yokobond.github.io/xcratch-example/dist/pd2Scratch.mjs',
     collaborator: 'Yengawa Lab',
-    iconURL: xcratchExampleIconURL,
-    insetIconURL: xcratchExampleInsetIconURL,
+    iconURL: pd2ScratchIconURL,
+    insetIconURL: pd2ScratchInsetIconURL,
     description: (
         <FormattedMessage
             defaultMessage="example extension for Xcratch"
             description="Description for example extension for Xcratch"
-            id="gui.extension.xcratchExample.description"
+            id="gui.extension.pd2Scratch.description"
         />
     ),
     featured: true,
     disabled: false,
     bluetoothRequired: false,
     internetConnectionRequired: true,
-    helpLink: 'https://github.com/yokobond/xcratch-example/',
+    helpLink: 'https://github.com/champierre/pd2scratch/',
     translationMap: translationMap
 };
 

@@ -3,17 +3,17 @@ example extension for Xcratch ([yokobond/xcratch: Extendable Scratch3 Programmin
 
 ## ✨ What You can Do with Xcratch
 
-Open [Xcratch Example](https://yokobond.github.io/xcratch/?project=https://yokobond.github.io/xcratch-example/examples/Xcratch%20Example.sb3) to look at what you can do with Xcratch. 
+Open [Xcratch Example](https://yokobond.github.io/xcratch/?project=https://yokobond.github.io/xcratch-example/examples/Xcratch%20Example.sb3) to look at what you can do with Xcratch.
 
 This project using "Xcratch Example" extension which add an extra-block "do it" to normal Scratch. This "do it" block executes string in its input field as a sentence in Javascript and return the result.
 
-You can make own extension based on this repo and publish a project using your extension on the web. 
+You can make own extension based on this repo and publish a project using your extension on the web.
 
 ## How to Develop Own Extension
 
 ### Setup Development Environment
 
-First of all, download [yokobond/scratch-gui at xcratch](https://github.com/yokobond/scratch-gui/tree/xcratch) and setup it as your extension to be registered. 
+First of all, download [yokobond/scratch-gui at xcratch](https://github.com/yokobond/scratch-gui/tree/xcratch) and setup it as your extension to be registered.
 
 ```sh
 git clone -b xcratch https://github.com/yokobond/scratch-gui.git
@@ -21,7 +21,7 @@ cd ./scratch-gui
 npm install
 ```
 
-Download [the latest Xcratch Example Code](https://github.com/yokobond/xcratch-example/archive/master.zip) from [yokobond/xcratch-example](https://github.com/yokobond/xcratch-example). This is the base code to be modified as your extension.
+Download [the latest Xcratch Example Code](https://github.com/champierre/pd2scratch/archive/master.zip) from [champierre/pd2scratch](https://github.com/champierre/pd2scratch). This is the base code to be modified as your extension.
 
 Unzip the downloaded file "xcratch-example-master.zip" and rename extracted folder to your extension repo name.
 
@@ -44,7 +44,7 @@ There are some node scripts in "package.json" to develop original extension. Ext
 
 You should change all extensionID, extensionName, extensionURL in source code under `src/[entry|body]` to the values of your extension.
 
-Then register your extension in a Scratch server for debugging. Script `register.js` adds a extension in a local Scratch server. It makes links of source path to local Scratch code, and modifies code of the Scratch to appear the extension in its extension selector. 
+Then register your extension in a Scratch server for debugging. Script `register.js` adds a extension in a local Scratch server. It makes links of source path to local Scratch code, and modifies code of the Scratch to appear the extension in its extension selector.
 
 Run the register-script by node.js as follows.
 
@@ -101,30 +101,30 @@ build.js accepts these command-line arguments.
 
 ### Module Deployment
 
-This repo has github-workflow scripts to deploy your module on its 'gh-pages'. 
+This repo has github-workflow scripts to deploy your module on its 'gh-pages'.
 
-First, you make 'gh-pages' branch and set it to publish according with [Configuring a publishing source for your GitHub Pages site - GitHub Docs](https://docs.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#choosing-a-publishing-source). 
+First, you make 'gh-pages' branch and set it to publish according with [Configuring a publishing source for your GitHub Pages site - GitHub Docs](https://docs.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#choosing-a-publishing-source).
 
-When you push it to 'master' branch, your code is published under `https://<user>.github.io/<repository>/`. 
+When you push it to 'master' branch, your code is published under `https://<user>.github.io/<repository>/`.
 
-So that the URL of your extension module will be `https://<user>.github.io/<repository>/dist/<moduleName>.mjs`. 
+So that the URL of your extension module will be `https://<user>.github.io/<repository>/dist/<moduleName>.mjs`.
 
-When you push it to 'develop' branch, `deploy-gh-pages-dev.yml` will be activated. This script publishes all your code under `https://<user>.github.io/<repository>/dev/`. 
+When you push it to 'develop' branch, `deploy-gh-pages-dev.yml` will be activated. This script publishes all your code under `https://<user>.github.io/<repository>/dev/`.
 
-When you would like to publish your extension module on another server, check the server accepts [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) from `https://yokobond.github.io/`. If the server was not enabled CORS, Xcratch cannot import your module. 
+When you would like to publish your extension module on another server, check the server accepts [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) from `https://yokobond.github.io/`. If the server was not enabled CORS, Xcratch cannot import your module.
 
 
 ### How to Auto-load Extension
 
-Xcratch loads all extensions which is used in the project automatically. 
+Xcratch loads all extensions which is used in the project automatically.
 
-If you make a project using at least one block of your extension and save as `examples/example.sb3`. The project can be opened with Xcratch by URL like following. 
+If you make a project using at least one block of your extension and save as `examples/example.sb3`. The project can be opened with Xcratch by URL like following.
 
 ```
 https://yokobond.github.io/xcratch/?project=https://<user>.github.io/<repo>/examples/example.sb3
-``` 
+```
 
-When this URL was opened in a web browser, Xcratch loads your extension module automatically then opens the project. 
+When this URL was opened in a web browser, Xcratch loads your extension module automatically then opens the project.
 
 
 ## Author
@@ -136,7 +136,7 @@ When this URL was opened in a web browser, Xcratch loads your extension module a
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/yokobond/xcratch-example/issues). 
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/champierre/pd2scratch/issues).
 ## Show your support
 
 Give a ⭐️ if this project helped you!
@@ -145,4 +145,4 @@ Give a ⭐️ if this project helped you!
 ## 📝 License
 
 Copyright © 2021 [Koji Yokokawa](https://github.com/yokobond).<br />
-This project is [MIT](https://github.com/yokobond/xcratch-example/blob/master/LICENSE) licensed.
+This project is [MIT](https://github.com/champierre/pd2scratch/blob/master/LICENSE) licensed.
