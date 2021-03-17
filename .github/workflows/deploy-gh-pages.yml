@@ -11,11 +11,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          repository: yokobond/xcratch-example
+          repository: champierre/pd2scratch
           ref: master
-          path: ./xcratch-example
+          path: ./pd2scratch
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./xcratch-example
+          publish_dir: ./pd2scratch
           keep_files: true
